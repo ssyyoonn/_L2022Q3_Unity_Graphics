@@ -25,7 +25,7 @@ Shader "My/SurfaceShader/UV_Flame"
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
-            fixed4 d = tex2D (_MainTex2, float2(IN.uv_MainTex2.x, IN.uv_MainTex2.y - _Time.y));
+            fixed4 d = tex2D (_MainTex2, float2(IN.uv_MainTex2.x, IN.uv_MainTex2.y - _Time.y)); // x값은 고정 (좌우 이동 x)
             // o.Albedo = c.rgb;
             //o.Emission = c.rgb;
             //o.Alpha = c.a;
