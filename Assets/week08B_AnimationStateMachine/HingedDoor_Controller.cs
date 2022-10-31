@@ -6,6 +6,7 @@ public class HingedDoor_Controller : MonoBehaviour
 {
     public GameObject DoorPivot;
 
+
     private void OnTriggerEnter(Collider other)
     {
         DoorPivot.GetComponent<Animator>().SetInteger("State", 1);
